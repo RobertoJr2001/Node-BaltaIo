@@ -1,8 +1,14 @@
+'use strict';
+
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const app = express();
 const router = express.Router();
+
+// conectar ao banco
+mongoose.connect('Connection String');
 
 // carregar rotas
 const indexRoutes = require('./routes/index');
