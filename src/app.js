@@ -7,10 +7,13 @@ const mongoose = require('mongoose');
 const app = express();
 const router = express.Router();
 
-// conectar ao banco
+// DataBase
 mongoose.connect('Connection String');
 
-// carregar rotas
+// Models
+const Product = require('./model/product'); 
+
+// Routes
 const indexRoutes = require('./routes/index');
 const products = require('./routes/products');
 
